@@ -1,0 +1,33 @@
+$date
+	Sat Oct  4 15:42:11 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module buttonpressLEDR_tb $end
+$var wire 1 ! tb_LEDR $end
+$var reg 1 " tb_button $end
+$scope module uut $end
+$var wire 1 ! LEDR $end
+$var wire 1 " button $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0"
+0!
+$end
+#10000
+1!
+1"
+#20000
+0!
+0"
+#30000

@@ -1,0 +1,6 @@
+# this is my own custom .pcf for the lattice FPGA 
+# I will add pin names only as and when required for an upcoming project
+
+# control red led using button
+set_io LEDR 11
+set_io button 10
