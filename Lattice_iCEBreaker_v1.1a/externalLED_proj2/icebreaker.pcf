@@ -1,0 +1,10 @@
+# this is my own custom .pcf for the lattice FPGA 
+# I will add pin names as and when required for an upcoming project
+
+#this version is updated for project2
+
+
+set_io LEDR          11      # Red LED '/LEDR' (active-low)
+set_io button        10      # User pushbutton 'SW1' (active-low)
+
+set_io EXTERNAL_LED  4       # Pin1 PMOD A1 (GPIO) 

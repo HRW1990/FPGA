@@ -1,0 +1,33 @@
+$date
+	Sun Oct  5 18:53:37 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module external_LED_tb $end
+$var wire 1 ! tb_EXTERNAL_LED $end
+$var reg 1 " tb_button $end
+$scope module uut $end
+$var wire 1 ! EXTERNAL_LED $end
+$var wire 1 " button $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0"
+0!
+$end
+#10000
+1!
+1"
+#20000
+0!
+0"
+#30000
