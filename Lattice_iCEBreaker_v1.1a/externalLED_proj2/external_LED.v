@@ -1,6 +1,6 @@
 /***************************************************
 Engineer: Harrison Warke
-Date Created: 05/10/2025
+Date Created: 06/10/2025
 Module Name:  external_LED
 Project Name: LAoE
 Target Device: Lattice ICE40UP5K-SG48
