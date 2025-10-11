@@ -9,4 +9,5 @@ set_io button           10      # User pushbutton 'SW1' (active-low)
 
 set_io EXTERNAL_LED      4       # Pin1 PMOD A1 (GPIO) 
 
-set_io OPEN_DRAIN_OP1   39.      # LED_RBG0 (open-drain)
+set_io LED_CATHODE      39      # LED_RBG0 - used here as OD IO
+set_io BUTTON           40.     # LED_RGB1 - used here as OD IO
