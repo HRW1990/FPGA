@@ -18,7 +18,7 @@ module top (
     );
     
 
-    //LED pin: open-drain output (sinks current when led_on=1
+    //LED pin: open-drain output (sinks current when led_on=1)
     SB_IO_OD #(
         .PINTYPE(6'b011001), //open-drain output
         .NEG_TRIGGER(1'b0)
