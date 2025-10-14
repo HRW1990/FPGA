@@ -7,7 +7,8 @@
 set_io LEDR             11      # Red LED '/LEDR' (active-low)
 set_io button           10      # User pushbutton 'SW1' (active-low)
 
-set_io EXTERNAL_LED      4       # Pin1 PMOD A1 (GPIO) 
+set_io EXTERNAL_LED      4      # Pin1 PMOD A1 (GPIO) 
 
-set_io LED_CATHODE      39      # LED_RBG0 - used here as OD IO
-set_io BUTTON           40.     # LED_RGB1 - used here as OD IO
+set_io LED_CATHODE      42      # GPIO - configured in proj_3 as an open-drain output
+set_io BUTTON           43      # GPIO - configured in proj_3 as an input only
+
