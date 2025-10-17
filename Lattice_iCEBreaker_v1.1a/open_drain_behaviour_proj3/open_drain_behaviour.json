@@ -15405,7 +15405,7 @@
           "type": "SB_IO",
           "parameters": {
             "NEG_TRIGGER": "0",
-            "PIN_TYPE": "011001"
+            "PIN_TYPE": "101001"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -15417,7 +15417,7 @@
             "PACKAGE_PIN": "inout"
           },
           "connections": {
-            "D_OUT_0": [ 5 ],
+            "D_OUT_0": [ 4 ],
             "OUTPUT_ENABLE": [ 5 ],
             "PACKAGE_PIN": [ 3 ]
           }

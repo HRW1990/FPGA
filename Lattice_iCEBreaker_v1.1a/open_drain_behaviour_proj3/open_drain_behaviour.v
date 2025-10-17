@@ -35,12 +35,12 @@ module open_drain_behaviour (
     //LED pin: open-drain output (sinks current when led_on = 1)
 
     SB_IO #(
-        .PIN_TYPE(6'b011001),       //configure as open-drain output
+        .PIN_TYPE(6'b101001),       //configure as open-drain output
         .NEG_TRIGGER(1'b0)
     ) 
         led_io (
         .PACKAGE_PIN(LED_CATHODE),
-        .D_OUT_0(led_on),            //drives NMOS gate
+        .D_OUT_0(button_in) ,            //drives NMOS gate
         .OUTPUT_ENABLE(led_on)      //only pull low when on, otherwise Hi-Z);
         );
 
