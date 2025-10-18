@@ -1,0 +1,17 @@
+# this is my own custom .pcf for the lattice FPGA 
+# I will add pin names as and when required for an upcoming project
+
+#this version is updated for project4
+
+#-------- external digital inputs -------
+set_io S7               20      # external digital Input 7 
+set_io S8               18      # external digital input 8
+
+#-------- combinational outputs --------
+
+set_io OUT1             43      # inverse of S7
+set_io OUT2             38      # S7 AND S8
+set_io OUT3             34      # S7 NOR S8
+set_io OUT4             31      # S7 XOR S8
+set_io OUT5             28      # S7 AND (NOT S8)
+

@@ -1,0 +1,56 @@
+$date
+	Sat Oct 18 19:16:59 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module combinational_logic_tb $end
+$var wire 1 ! tb_OUT5 $end
+$var wire 1 " tb_OUT4 $end
+$var wire 1 # tb_OUT3 $end
+$var wire 1 $ tb_OUT2 $end
+$var wire 1 % tb_OUT1 $end
+$var reg 1 & tb_S7 $end
+$var reg 1 ' tb_S8 $end
+$scope module uut $end
+$var wire 1 % OUT1 $end
+$var wire 1 $ OUT2 $end
+$var wire 1 # OUT3 $end
+$var wire 1 " OUT4 $end
+$var wire 1 ! OUT5 $end
+$var wire 1 & S7 $end
+$var wire 1 ' S8 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0'
+0&
+1%
+0$
+1#
+0"
+0!
+$end
+#10000
+0#
+1"
+1'
+#20000
+1!
+0%
+0'
+1&
+#30000
+0!
+1$
+0"
+1'
+#50000
