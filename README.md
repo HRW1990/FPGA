@@ -58,6 +58,7 @@ Something new here was adding some new functionality to the test bench .v file t
 This was done as follows: 
 
  $display("S7 S8 | OUT1 OUT2 OUT3 OUT4 OUT5");
+ 
  $monitor("%b  %b |   %b    %b    %b    %b    %b", 
    tb_S7, tb_S8, tb_OUT1, tb_OUT2, tb_OUT3, tb_OUT4, tb_OUT5);
 
