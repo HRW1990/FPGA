@@ -1,0 +1,56 @@
+$date
+	Tue Oct 21 09:06:59 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module two_to_one_multiplexer_tb $end
+$var wire 1 ! tb_out $end
+$var reg 1 " tb_a $end
+$var reg 1 # tb_b $end
+$var reg 1 $ tb_sel $end
+$scope module uut $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 ! out $end
+$var wire 1 $ sel $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#10000
+1#
+#20000
+1!
+0#
+1"
+#30000
+1#
+#40000
+0!
+0#
+0"
+1$
+#50000
+1!
+1#
+#60000
+0!
+0#
+1"
+#70000
+1!
+1#
+#80000

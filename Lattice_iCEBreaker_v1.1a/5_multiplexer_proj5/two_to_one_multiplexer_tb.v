@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module two_to_onemultiplexer_tb;
+module two_to_one_multiplexer_tb;
 
     // Testbench signals
     reg tb_sel;
@@ -22,8 +22,8 @@ module two_to_onemultiplexer_tb;
         $dumpfile("two_to_one_multiplexer.vcd");      // Output VCD file
         $dumpvars(0, two_to_one_multiplexer_tb); // Dump all variables in this scope
 
-        $display("Sel A B | OUT");
-        $monitor("%b  %b |   %b    %b    %b    %b    %b", 
+        $display("Sel A B  | OUT");
+        $monitor("%b  %b  %b |  %b", 
             tb_sel, tb_a, tb_b, tb_out);
     
 
