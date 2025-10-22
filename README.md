@@ -64,6 +64,29 @@ This was done as follows:
 
 The display is like a 'printf' call in C and monitor will print the state of each of the arguments whenever one of them changes. 
 
+---------------------------------------------------------------------------
+
+Project 5 - Multiplexer with logic gates 
+
+I used a karnaugh map and sum of products to determine which logic gates to use to implement a 2:1 multiplexer. 
+
+Again I iused the 'display' and 'monitor' in my test bench to print out the resulting truth table in the terminal before flashing the bitstream to physical memory. 
+
+---------------------------------------------------------------------------
+
+Project 6 - Multiplexer with the conditional operator
+
+This is another method of creating a 2:1 multiplexer - by using the ternary operator like so: 
+
+result = condition ? value_if_true : value_if_false;
+
+In my code this looked like this: 
+
+assign OUTPUT = SEL ? IN_B : IN_A;
+
+I'm wondering if there's a way to automate my building of the simulation binary, rather than typing it into my excel document... 
+
+---------------------------------------------------------------------------
 
 
 
