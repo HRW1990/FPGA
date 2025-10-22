@@ -1,0 +1,56 @@
+$date
+	Wed Oct 22 08:57:18 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module multiplexer_behavioural_tb $end
+$var wire 1 ! tb_OUTPUT $end
+$var reg 1 " tb_IN_A $end
+$var reg 1 # tb_IN_B $end
+$var reg 1 $ tb_SEL $end
+$scope module uut $end
+$var wire 1 " IN_A $end
+$var wire 1 # IN_B $end
+$var wire 1 $ SEL $end
+$var wire 1 ! OUTPUT $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#10000
+1#
+#20000
+1!
+0#
+1"
+#30000
+1#
+#40000
+0!
+0#
+0"
+1$
+#50000
+1!
+1#
+#60000
+0!
+0#
+1"
+#70000
+1!
+1#
+#80000
