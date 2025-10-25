@@ -1,0 +1,15 @@
+# this is my own custom .pcf for the lattice FPGA 
+# I will add pin names as and when required for an upcoming project
+
+#this version is updated for project7
+
+#-------- external digital inputs -------
+set_io IN_A              26     # external digital input five
+set_io IN_B              23     # external digital input six
+set_io IN_C              20     # external digital input seven
+set_io IN_D              18     # external digital input eight
+
+set_io OUT               43     # external logic LED one
+
+#----------- endofdocument -------- 
+
