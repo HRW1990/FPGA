@@ -1,0 +1,70 @@
+$date
+	Mon Oct 27 08:05:45 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module voting_system_tb $end
+$var wire 1 ! tb_TWO_VOTES_LED $end
+$var wire 1 " tb_THREE_VOTES_LED $end
+$var wire 1 # tb_ONE_VOTE_LED $end
+$var wire 1 $ tb_NO_VOTES_LED $end
+$var reg 1 % tb_IN_A $end
+$var reg 1 & tb_IN_B $end
+$var reg 1 ' tb_IN_C $end
+$scope module uut $end
+$var wire 1 % IN_A $end
+$var wire 1 & IN_B $end
+$var wire 1 ' IN_C $end
+$var wire 1 $ NO_VOTES_LED $end
+$var wire 1 # ONE_VOTE_LED $end
+$var wire 1 " THREE_VOTES_LED $end
+$var wire 1 ! TWO_VOTES_LED $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0'
+0&
+0%
+1$
+1#
+0"
+1!
+$end
+#10000
+0!
+1"
+1'
+#20000
+0'
+1&
+#30000
+0#
+1!
+1'
+#40000
+1#
+0!
+0'
+0&
+1%
+#50000
+0#
+1!
+1'
+#60000
+0'
+1&
+#70000
+0$
+1#
+1'
+#80000

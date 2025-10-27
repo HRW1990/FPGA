@@ -1,0 +1,161 @@
+#! /usr/local/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x7faa8b904080 .scope module, "voting_system_tb" "voting_system_tb" 2 3;
+ .timescale -9 -12;
+v0x600003e05290_0 .var "tb_IN_A", 0 0;
+v0x600003e05320_0 .var "tb_IN_B", 0 0;
+v0x600003e053b0_0 .var "tb_IN_C", 0 0;
+v0x600003e05440_0 .net "tb_NO_VOTES_LED", 0 0, L_0x6000027040e0;  1 drivers
+v0x600003e054d0_0 .net "tb_ONE_VOTE_LED", 0 0, L_0x600002704700;  1 drivers
+v0x600003e05560_0 .net "tb_THREE_VOTES_LED", 0 0, L_0x600002704cb0;  1 drivers
+v0x600003e055f0_0 .net "tb_TWO_VOTES_LED", 0 0, L_0x600002704bd0;  1 drivers
+S_0x7faa8b9041f0 .scope module, "uut" "voting_system" 2 15, 3 30 0, S_0x7faa8b904080;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "IN_A";
+    .port_info 1 /INPUT 1 "IN_B";
+    .port_info 2 /INPUT 1 "IN_C";
+    .port_info 3 /OUTPUT 1 "NO_VOTES_LED";
+    .port_info 4 /OUTPUT 1 "ONE_VOTE_LED";
+    .port_info 5 /OUTPUT 1 "TWO_VOTES_LED";
+    .port_info 6 /OUTPUT 1 "THREE_VOTES_LED";
+L_0x600002704000 .functor AND 1, v0x600003e05290_0, v0x600003e05320_0, C4<1>, C4<1>;
+L_0x600002704070 .functor AND 1, L_0x600002704000, v0x600003e053b0_0, C4<1>, C4<1>;
+L_0x6000027040e0 .functor NOT 1, L_0x600002704070, C4<0>, C4<0>, C4<0>;
+L_0x600002704150 .functor NOT 1, v0x600003e05290_0, C4<0>, C4<0>, C4<0>;
+L_0x6000027041c0 .functor NOT 1, v0x600003e05320_0, C4<0>, C4<0>, C4<0>;
+L_0x600002704230 .functor AND 1, L_0x600002704150, L_0x6000027041c0, C4<1>, C4<1>;
+L_0x6000027042a0 .functor NOT 1, v0x600003e05290_0, C4<0>, C4<0>, C4<0>;
+L_0x600002704310 .functor NOT 1, v0x600003e053b0_0, C4<0>, C4<0>, C4<0>;
+L_0x600002704380 .functor AND 1, L_0x6000027042a0, L_0x600002704310, C4<1>, C4<1>;
+L_0x6000027043f0 .functor OR 1, L_0x600002704230, L_0x600002704380, C4<0>, C4<0>;
+L_0x600002704460 .functor NOT 1, v0x600003e05320_0, C4<0>, C4<0>, C4<0>;
+L_0x6000027044d0 .functor NOT 1, v0x600003e053b0_0, C4<0>, C4<0>, C4<0>;
+L_0x600002704540 .functor AND 1, L_0x600002704460, L_0x6000027044d0, C4<1>, C4<1>;
+L_0x600002704620 .functor OR 1, L_0x6000027043f0, L_0x600002704540, C4<0>, C4<0>;
+L_0x600002704690 .functor AND 1, v0x600003e05290_0, v0x600003e05320_0, C4<1>, C4<1>;
+L_0x6000027045b0 .functor AND 1, L_0x600002704690, v0x600003e053b0_0, C4<1>, C4<1>;
+L_0x600002704700 .functor OR 1, L_0x600002704620, L_0x6000027045b0, C4<0>, C4<0>;
+L_0x600002704770 .functor AND 1, v0x600003e05290_0, v0x600003e05320_0, C4<1>, C4<1>;
+L_0x6000027047e0 .functor AND 1, v0x600003e05290_0, v0x600003e053b0_0, C4<1>, C4<1>;
+L_0x600002704850 .functor OR 1, L_0x600002704770, L_0x6000027047e0, C4<0>, C4<0>;
+L_0x6000027048c0 .functor AND 1, v0x600003e05320_0, v0x600003e053b0_0, C4<1>, C4<1>;
+L_0x600002704930 .functor OR 1, L_0x600002704850, L_0x6000027048c0, C4<0>, C4<0>;
+L_0x6000027049a0 .functor NOT 1, v0x600003e05290_0, C4<0>, C4<0>, C4<0>;
+L_0x600002704a10 .functor NOT 1, v0x600003e05320_0, C4<0>, C4<0>, C4<0>;
+L_0x600002704a80 .functor AND 1, L_0x6000027049a0, L_0x600002704a10, C4<1>, C4<1>;
+L_0x600002704af0 .functor NOT 1, v0x600003e053b0_0, C4<0>, C4<0>, C4<0>;
+L_0x600002704b60 .functor AND 1, L_0x600002704a80, L_0x600002704af0, C4<1>, C4<1>;
+L_0x600002704bd0 .functor OR 1, L_0x600002704930, L_0x600002704b60, C4<0>, C4<0>;
+L_0x600002704c40 .functor OR 1, v0x600003e05290_0, v0x600003e05320_0, C4<0>, C4<0>;
+L_0x600002704cb0 .functor OR 1, L_0x600002704c40, v0x600003e053b0_0, C4<0>, C4<0>;
+v0x600003e04000_0 .net "IN_A", 0 0, v0x600003e05290_0;  1 drivers
+v0x600003e04090_0 .net "IN_B", 0 0, v0x600003e05320_0;  1 drivers
+v0x600003e04120_0 .net "IN_C", 0 0, v0x600003e053b0_0;  1 drivers
+v0x600003e041b0_0 .net "NO_VOTES_LED", 0 0, L_0x6000027040e0;  alias, 1 drivers
+v0x600003e04240_0 .net "ONE_VOTE_LED", 0 0, L_0x600002704700;  alias, 1 drivers
+v0x600003e042d0_0 .net "THREE_VOTES_LED", 0 0, L_0x600002704cb0;  alias, 1 drivers
+v0x600003e04360_0 .net "TWO_VOTES_LED", 0 0, L_0x600002704bd0;  alias, 1 drivers
+v0x600003e043f0_0 .net *"_ivl_0", 0 0, L_0x600002704000;  1 drivers
+v0x600003e04480_0 .net *"_ivl_10", 0 0, L_0x600002704230;  1 drivers
+v0x600003e04510_0 .net *"_ivl_12", 0 0, L_0x6000027042a0;  1 drivers
+v0x600003e045a0_0 .net *"_ivl_14", 0 0, L_0x600002704310;  1 drivers
+v0x600003e04630_0 .net *"_ivl_16", 0 0, L_0x600002704380;  1 drivers
+v0x600003e046c0_0 .net *"_ivl_18", 0 0, L_0x6000027043f0;  1 drivers
+v0x600003e04750_0 .net *"_ivl_2", 0 0, L_0x600002704070;  1 drivers
+v0x600003e047e0_0 .net *"_ivl_20", 0 0, L_0x600002704460;  1 drivers
+v0x600003e04870_0 .net *"_ivl_22", 0 0, L_0x6000027044d0;  1 drivers
+v0x600003e04900_0 .net *"_ivl_24", 0 0, L_0x600002704540;  1 drivers
+v0x600003e04990_0 .net *"_ivl_26", 0 0, L_0x600002704620;  1 drivers
+v0x600003e04a20_0 .net *"_ivl_28", 0 0, L_0x600002704690;  1 drivers
+v0x600003e04ab0_0 .net *"_ivl_30", 0 0, L_0x6000027045b0;  1 drivers
+v0x600003e04b40_0 .net *"_ivl_34", 0 0, L_0x600002704770;  1 drivers
+v0x600003e04bd0_0 .net *"_ivl_36", 0 0, L_0x6000027047e0;  1 drivers
+v0x600003e04c60_0 .net *"_ivl_38", 0 0, L_0x600002704850;  1 drivers
+v0x600003e04cf0_0 .net *"_ivl_40", 0 0, L_0x6000027048c0;  1 drivers
+v0x600003e04d80_0 .net *"_ivl_42", 0 0, L_0x600002704930;  1 drivers
+v0x600003e04e10_0 .net *"_ivl_44", 0 0, L_0x6000027049a0;  1 drivers
+v0x600003e04ea0_0 .net *"_ivl_46", 0 0, L_0x600002704a10;  1 drivers
+v0x600003e04f30_0 .net *"_ivl_48", 0 0, L_0x600002704a80;  1 drivers
+v0x600003e04fc0_0 .net *"_ivl_50", 0 0, L_0x600002704af0;  1 drivers
+v0x600003e05050_0 .net *"_ivl_52", 0 0, L_0x600002704b60;  1 drivers
+v0x600003e050e0_0 .net *"_ivl_56", 0 0, L_0x600002704c40;  1 drivers
+v0x600003e05170_0 .net *"_ivl_6", 0 0, L_0x600002704150;  1 drivers
+v0x600003e05200_0 .net *"_ivl_8", 0 0, L_0x6000027041c0;  1 drivers
+    .scope S_0x7faa8b904080;
+T_0 ;
+    %vpi_call 2 27 "$dumpfile", "voting_system.vcd" {0 0 0};
+    %vpi_call 2 28 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7faa8b904080 {0 0 0};
+    %vpi_call 2 30 "$display", "A  B  C | None    One    Two    Three" {0 0 0};
+    %vpi_call 2 31 "$monitor", "%b  %b  %b |   %b      %b      %b      %b", v0x600003e05290_0, v0x600003e05320_0, v0x600003e053b0_0, v0x600003e05440_0, v0x600003e054d0_0, v0x600003e055f0_0, v0x600003e05560_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x600003e05290_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x600003e05320_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x600003e053b0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x600003e05290_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x600003e05320_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x600003e053b0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x600003e05290_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x600003e05320_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x600003e053b0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x600003e05290_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x600003e05320_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x600003e053b0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x600003e05290_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x600003e05320_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x600003e053b0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x600003e05290_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x600003e05320_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x600003e053b0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x600003e05290_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x600003e05320_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x600003e053b0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x600003e05290_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x600003e05320_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x600003e053b0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 69 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "voting_system_tb.v";
+    "voting_system.v";
